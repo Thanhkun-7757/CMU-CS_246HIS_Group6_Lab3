@@ -1,0 +1,24 @@
+package vn.viettuts;
+ 
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+ 
+/**
+ * StudentManager class
+ * 
+ * @author viettuts.vn
+ */
+public class StudentManager {
+    public static Scanner scanner = new Scanner(System.in);
+    private List<Student> studentList;
+    private StudentDao studentDao;
+     
+    /**
+     * init StudentDao object and
+     * read list student when init StudentManager object
+     */   
+    public StudentManager() {
+        studentDao = new StudentDao();
+        studentList = studentDao.read();
+    }
