@@ -38,3 +38,28 @@ public class StudentManager {
         studentList.add(student);
         studentDao.write(studentList);
     }
+/**
+     * edit student by id
+     * 
+     * @param id
+     */
+    public void edit(int id) {
+        boolean isExisted = false;
+        int size = studentList.size();
+        for (int i = 0; i < size; i++) {
+            if (studentList.get(i).getId() == id) {
+                isExisted = true;
+                studentList.get(i).setName(inputName());
+                studentList.get(i).setAge(inputAge());
+                studentList.get(i).setAddress(inputAddress());
+                studentList.get(i).setGpa(inputGpa());
+                break;
+            }
+        }
+        if (!isExisted) {
+            System.out.printf("id = %d not existed.\n", id);
+        } else {
+            studentDao.write(studentList);
+        }
+    }
+ 
