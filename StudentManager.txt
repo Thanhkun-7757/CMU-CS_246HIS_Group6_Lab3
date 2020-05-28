@@ -83,3 +83,9 @@ public class StudentManager {
             System.out.printf("id = %d not existed.\n", id);
         }
     } 
+/**
+     * sort student by name
+     */
+    public void sortStudentByName() {
+        Collections.sort(studentList, new SortStudentByName());
+    }
