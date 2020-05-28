@@ -57,4 +57,11 @@ public class Student implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
+    public float getGpa() {
+        return gpa;
+    }
+ 
+    public void setGpa(float gpa) {
+        this.gpa = gpa;
+    }
 }
