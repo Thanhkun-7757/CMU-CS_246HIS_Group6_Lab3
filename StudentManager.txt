@@ -59,7 +59,7 @@ public class StudentManager {
         if (!isExisted) {
             System.out.printf("id = %d not existed.\n", id);
         } else {
-            studentDao.write(studentList);
+            studentDao.write(studentList); 
         }
     }
  
