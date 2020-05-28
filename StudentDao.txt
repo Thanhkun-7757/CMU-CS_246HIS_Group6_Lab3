@@ -89,4 +89,14 @@ public class StudentDao {
      * 
      * @param os: output stream
      */
+private void closeStream(OutputStream os) {
+        if (os != null) {
+            try {
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
     
