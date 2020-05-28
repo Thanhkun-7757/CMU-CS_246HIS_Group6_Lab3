@@ -88,4 +88,23 @@ public class StudentManager {
      */
     public void sortStudentByName() {
         Collections.sort(studentList, new SortStudentByName());
+    }		
+/**
+     * sort student by id
+     */
+    public void sortStudentByGPA() {
+        Collections.sort(studentList, new SortStudentByGPA());
+    }
+ 
+    /**
+     * show list student to screen
+     */
+    public void show() {
+        for (Student student : studentList) {
+            System.out.format("%5d | ", student.getId());
+            System.out.format("%20s | ", student.getName());
+            System.out.format("%5d | ", student.getAge());
+            System.out.format("%20s | ", student.getAddress());
+            System.out.format("%10.1f%n", student.getGpa());
+        }
     }
