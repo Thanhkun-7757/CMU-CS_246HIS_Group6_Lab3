@@ -124,3 +124,28 @@ public class StudentManager {
             }
         }
     }
+/**
+     * input student name
+     * 
+     * @return student name
+     */
+    private String inputName() {
+        System.out.print("Input student name: ");
+        return scanner.nextLine();
+    }
+ 
+    /**
+     * input student address
+     * 
+     * @return student address
+     */
+    private String inputAddress() {
+        System.out.print("Input student address: ");
+        return scanner.nextLine();
+    }
+ 
+    /**
+     * input student age
+     * 
+     * @return student age
+     */
