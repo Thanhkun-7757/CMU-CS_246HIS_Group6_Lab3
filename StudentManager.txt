@@ -62,4 +62,24 @@ public class StudentManager {
             studentDao.write(studentList); 
         }
     }
- 
+/**
+     * delete student by id
+     * 
+     * @param id: student id
+     */
+    public void delete(int id) {
+        Student student = null;
+        int size = studentList.size();
+        for (int i = 0; i < size; i++) {
+            if (studentList.get(i).getId() == id) {
+                student = studentList.get(i);
+                break;
+            }
+        }
+        if (student != null) {
+            studentList.remove(student);
+            studentDao.write(studentList);
+        } else {
+            System.out.printf("id = %d not existed.\n", id);
+        }
+    } 
