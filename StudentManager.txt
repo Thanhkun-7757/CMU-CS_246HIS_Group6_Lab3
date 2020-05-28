@@ -22,3 +22,19 @@ public class StudentManager {
         studentDao = new StudentDao();
         studentList = studentDao.read();
     }
+/**
+     * add student to studentList
+     * 
+     * @param student
+     */
+    public void add() {
+        int id = (studentList.size() > 0) ? (studentList.size() + 1) : 1;
+        System.out.println("student id = " + id);
+        String name = inputName();
+        byte age = inputAge();
+        String address = inputAddress();
+        float gpa = inputGpa();
+        Student student = new Student(id, name, age, address, gpa);
+        studentList.add(student);
+        studentDao.write(studentList);
+    }
