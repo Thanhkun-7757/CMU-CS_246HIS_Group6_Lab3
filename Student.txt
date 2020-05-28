@@ -20,8 +20,27 @@ public class Student implements Serializable {
  
     public Student(int id, String name, byte age, 
             String address, float gpa) {
-       
+        super();
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.gpa = gpa;
+    }
+    public int getId() {
+        return id;
     }
  
+    public void setId(int id) {
+        this.id = id;
+    }
+ 
+    public String getName() {
+        return name;
+    }
+ 
+    public void setName(String name) {
+        this.name = name;
+    }
    
 }
