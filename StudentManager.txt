@@ -149,3 +149,47 @@ public class StudentManager {
      * 
      * @return student age
      */
+private byte inputAge() {
+        System.out.print("Input student age: ");
+        while (true) {
+            try {
+                byte age = Byte.parseByte((scanner.nextLine()));
+                if (age < 0 && age > 100) {
+                    throw new NumberFormatException();
+                }
+                return age;
+            } catch (NumberFormatException ex) {
+                System.out.print("invalid! Input student id again: ");
+            }
+        }
+    }
+ 
+    /**
+     * input student gpa
+     * 
+     * @return gpa
+     */
+    private float inputGpa() {
+        System.out.print("Input student gpa: ");
+        while (true) {
+            try {
+                float gpa = Float.parseFloat((scanner.nextLine()));
+                if (gpa < 0.0 && gpa > 10.0) {
+                    throw new NumberFormatException();
+                }
+                return gpa;
+            } catch (NumberFormatException ex) {
+                System.out.print("invalid! Input student age again: ");
+            }
+        }
+    }
+ 
+    // getter && setter
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+ 
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
+}
